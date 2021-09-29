@@ -1,4 +1,3 @@
-import numpy as np
 from pyDecisions.py_decisions.ahp.fuzzy_ahp import fuzzy_ahp_method as fahp
 
 weight_derivation = 'geometric'  # 'mean' or 'geometric'
