@@ -4,7 +4,7 @@ from FuzzyAHP import fuzzy_ahp_method
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
+def index():
     return "Hello Flask-Heroku"
 
 @app.route('/ahp', methods=['POST'])
