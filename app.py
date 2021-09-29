@@ -86,6 +86,3 @@ def ahp():
 
     return fAhp.fuzzy_ahp_method(body) , 201
 
-
-if __name__ == '__main__':
-    app.run()
