@@ -9,13 +9,14 @@ def hello():
 
 @app.route('/ahp', methods=['POST'])
 def ahp():
+  from FuzzyAHP import fuzzy_ahp_method
   if request.method == 'POST':
     body = request.get_json()
     #print(fuzzy_ahp_method(body))
     #weight_derivation = 'geometric' # 'mean' or 'geometric'
     #weights, rc = ahp_method(dataset, wd = weight_derivation)
 
-    return fuzzy_ahp_method(body), 201
+    return "test post"#fuzzy_ahp_method(body), 201
 
 
 if __name__ == '__main__':
