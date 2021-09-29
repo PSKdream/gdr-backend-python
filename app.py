@@ -1,5 +1,5 @@
 from flask import Flask, request
-from src.fuzzyAHP import fuzzy_ahp_method
+#from src.fuzzyAHP import fuzzy_ahp_method
 
 app = Flask(__name__)
 
