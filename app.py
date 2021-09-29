@@ -16,7 +16,3 @@ def ahp():
     #weights, rc = ahp_method(dataset, wd = weight_derivation)
 
     return fuzzy_ahp_method(body), 201
-
-
-if __name__ == '__main__':
-    app.run()
