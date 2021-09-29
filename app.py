@@ -1,5 +1,5 @@
+from fuzzyMethod import fuzzyAhp
 from flask import Flask, request
-from src.fuzzyAHP import fuzzy_ahp_method #<---- this line
 
 app = Flask(__name__)
 
@@ -11,11 +11,12 @@ def hello():
 def ahp():
   if request.method == 'POST':
     body = request.get_json()
+    fAhp = fuzzyAhp()
     #print(fuzzy_ahp_method(body))
     #weight_derivation = 'geometric' # 'mean' or 'geometric'
     #weights, rc = ahp_method(dataset, wd = weight_derivation)
 
-    return fuzzy_ahp_method(body), 201
+    return fAhp.fuzzy_ahp_method(body) , 201
 
 
 if __name__ == '__main__':
