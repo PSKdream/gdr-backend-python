@@ -1,5 +1,5 @@
 from flask import Flask, request
-#from FuzzyAHP import fuzzy_ahp_method
+from src.fuzzyAHP import fuzzy_ahp_method
 
 app = Flask(__name__)
 
@@ -9,7 +9,6 @@ def hello():
 
 @app.route('/ahp', methods=['POST'])
 def ahp():
-  from FuzzyAHP import fuzzy_ahp_method
   if request.method == 'POST':
     body = request.get_json()
     #print(fuzzy_ahp_method(body))
