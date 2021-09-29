@@ -3,14 +3,12 @@ from FuzzyAHP import fuzzy_ahp_method
 
 app = Flask(__name__)
 
-@app.route('/hello')
+@app.route('/')
 def hello():
-  q = request.args.get('q')
-  print(q)
-  return { "message": "Hello! python" }, 201
+    return "Hello Flask-Heroku"
 
 @app.route('/ahp', methods=['POST'])
-def book():
+def ahp():
   if request.method == 'POST':
     body = request.get_json()
     #print(fuzzy_ahp_method(body))
