@@ -3,7 +3,7 @@ from FuzzyAHP import fuzzy_ahp_method
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/hello')
 def hello():
   q = request.args.get('q')
   print(q)
