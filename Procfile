@@ -1,1 +1,1 @@
-web: gunicorn app:app --port=${PORT:-5000}
+web: gunicorn wsgi:app  
